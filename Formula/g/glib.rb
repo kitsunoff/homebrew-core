@@ -28,7 +28,6 @@ class Glib < Formula
   uses_from_macos "flex" => :build # for gobject-introspection
   uses_from_macos "libffi"
   uses_from_macos "python"
-  uses_from_macos "zlib"
 
   on_macos do
     depends_on "gettext"
@@ -37,6 +36,7 @@ class Glib < Formula
   on_linux do
     depends_on "dbus"
     depends_on "util-linux"
+    depends_on "zlib-ng-compat"
   end
 
   # These used to live in the now defunct `glib-utils`.
